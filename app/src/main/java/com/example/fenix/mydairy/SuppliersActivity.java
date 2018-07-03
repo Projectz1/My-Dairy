@@ -32,6 +32,7 @@ public class SuppliersActivity extends AppCompatActivity {
 
     }
 
+
     public void addSupplier(View view) {
         Intent addSupplierIntent = new Intent(SuppliersActivity.this, AddSupplierActivity.class);
         startActivity(addSupplierIntent);

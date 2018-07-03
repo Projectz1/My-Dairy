@@ -93,6 +93,7 @@
             android:layout_marginRight="100dp"
             android:layout_marginTop="16dp"
             android:background="#3fc1ce"
+            android:onClick="addSupplier"
             android:text="@string/action_save_supplier"
             android:textColor="@android:color/white"
             android:textStyle="bold" />
