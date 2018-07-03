@@ -25,11 +25,11 @@ public class AddSupplierActivity extends AppCompatActivity {
 
 
         if ((firstName.getText().toString().trim().equals(""))) {
-            Toast.makeText(getApplicationContext(), "First name field is empty", Toast.LENGTH_SHORT).show();
+            firstName.setError("Phone number is required");
         } else if ((lastName.getText().toString().trim().equals(""))) {
-            Toast.makeText(getApplicationContext(), "Last name field is empty", Toast.LENGTH_SHORT).show();
+            lastName.setError("Phone number is required");
         } else if ((phoneNumber.getText().toString().trim().equals(""))) {
-            Toast.makeText(getApplicationContext(), "Phone number field is empty", Toast.LENGTH_SHORT).show();
+            phoneNumber.setError("Phone number is required");
         } else {
             Intent i = new Intent(getApplicationContext(), SuppliersActivity.class);
             startActivity(i);
