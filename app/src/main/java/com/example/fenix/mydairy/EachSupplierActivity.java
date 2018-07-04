@@ -8,6 +8,6 @@ public class EachSupplierActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_each_supplier);
+
     }
 }
