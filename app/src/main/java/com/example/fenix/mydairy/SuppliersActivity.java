@@ -10,8 +10,14 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class SuppliersActivity extends AppCompatActivity {
-    String[] suppliers = {"DAVID", "JAMES", "ISAIAH", "JOSHUA", "JOHN", "JOEL", "JOACHIM", "NICK", "RONNIE", "YOU", "GWE", "NAWE", "GUNDI", "Nansikombi"};
+
+    ArrayList<String> firstName = new ArrayList<>();
+    ArrayList<String> lastName = new ArrayList<>();
+    ArrayList<String> email = new ArrayList<>();
+    ArrayList<String> phoneNumber = new ArrayList<>();
 
 
     @Override
@@ -20,15 +26,13 @@ public class SuppliersActivity extends AppCompatActivity {
         setContentView(R.layout.activity_suppliers);
         ListView listview = (ListView) findViewById(R.id.suppliers_list_view);
 
-        ArrayAdapter adapter = new ArrayAdapter(SuppliersActivity.this, android.R.layout.simple_list_item_1, suppliers);
+        firstName.add("Joachim");
+        firstName.add("Nicholas");
+        firstName.add("Rooney");
 
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(SuppliersActivity.this, android.R.layout.simple_expandable_list_item_1, firstName);
         listview.setAdapter(adapter);
-        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(), "position" + position + suppliers[position], Toast.LENGTH_LONG).show();
-            }
-        });
+
 
     }
 
