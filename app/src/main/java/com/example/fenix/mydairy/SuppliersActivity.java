@@ -8,11 +8,23 @@ import android.content.Intent;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import java.util.Comparator;
+import java.util.Arrays;
+
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class SuppliersActivity extends AppCompatActivity {
+
+    AddSupplierActivity addSupplierActivity;
+
+    Intent i = getIntent();
+//    String f_name = i.getStringExtra("f_name");
+//    String l_Name = i.getStringExtra("l_name");
+
 
     ArrayList<String> firstName = new ArrayList<>();
     ArrayList<String> lastName = new ArrayList<>();
@@ -25,17 +37,20 @@ public class SuppliersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suppliers);
         ListView listview = (ListView) findViewById(R.id.suppliers_list_view);
-
+        
         firstName.add("Joachim");
         firstName.add("Nicholas");
         firstName.add("Rooney");
+        firstName.add("Bryant");
+        firstName.add("James");
+        firstName.add("Joan");
+        firstName.add("Zoe");
+        firstName.add("Cynthia");
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(SuppliersActivity.this, android.R.layout.simple_expandable_list_item_1, firstName);
         listview.setAdapter(adapter);
 
-
     }
-
 
     public void addSupplier(View view) {
         Intent addSupplierIntent = new Intent(SuppliersActivity.this, AddSupplierActivity.class);
