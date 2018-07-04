@@ -36,8 +36,13 @@ public class SuppliersActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suppliers);
+
+        //Add back button
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         ListView listview = (ListView) findViewById(R.id.suppliers_list_view);
-        
+
         firstName.add("Joachim");
         firstName.add("Nicholas");
         firstName.add("Rooney");
