@@ -29,7 +29,6 @@
         <activity android:name=".EachSupplierActivity" />
         <activity android:name=".AddSupplierActivity" />
         <activity android:name=".HistoryActivity" />
-
         <activity
             android:name=".SuppliersActivity"
             android:label="@string/title_activity_suppliers" />

@@ -4,18 +4,22 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.content.Intent;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import java.util.Comparator;
-import java.util.Arrays;
-
-import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.Collections;
+
+
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+
 
 public class SuppliersActivity extends AppCompatActivity {
 
@@ -37,7 +41,6 @@ public class SuppliersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suppliers);
 
-        //Add back button
         getSupportActionBar().setDisplayShowCustomEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -61,4 +64,5 @@ public class SuppliersActivity extends AppCompatActivity {
         Intent addSupplierIntent = new Intent(SuppliersActivity.this, AddSupplierActivity.class);
         startActivity(addSupplierIntent);
     }
+
 }
