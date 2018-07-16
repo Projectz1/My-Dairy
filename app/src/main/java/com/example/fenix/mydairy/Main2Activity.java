@@ -82,6 +82,7 @@ public class Main2Activity extends AppCompatActivity
 
         } else if (id == R.id.nav_settings) {
 
+
         } else if (id == R.id.nav_about) {
 
         } else if (id == R.id.nav_logout) {
