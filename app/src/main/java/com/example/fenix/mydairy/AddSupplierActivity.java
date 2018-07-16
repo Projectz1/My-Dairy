@@ -5,9 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
-
-import java.util.function.Supplier;
 
 public class AddSupplierActivity extends AppCompatActivity {
 
@@ -31,7 +28,7 @@ public class AddSupplierActivity extends AppCompatActivity {
         if ((firstName.getText().toString().trim().equals(""))) {
             firstName.setError("First name is required");
         } else if ((lastName.getText().toString().trim().equals(""))) {
-            lastName.setError("PLast name is required");
+            lastName.setError("Last name is required");
         } else if ((phoneNumber.getText().toString().trim().equals(""))) {
             phoneNumber.setError("Phone number is required");
         } else if (phoneNumber.getText().length() < 10 || phoneNumber.getText().length() > 10) {
